@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Uploader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Your Resume</h1>
+        <form action="/uploader" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".pdf">
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>

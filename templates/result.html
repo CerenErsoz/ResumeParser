@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            margin-bottom: 10px;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Result</h1>
+    <p>The uploaded resume belongs to the category: {{ result }}</p>
+    <div class="section">
+        <h2>Personal Information:</h2>
+        <ul>
+            <li>Name: {{ personal_info['parts']['name'] }}</li>
+            <li>Email: {{ personal_info['parts']['email'] }}</li>
+            <li>Profiles: {{ personal_info['parts']['profiles'] }}</li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Experience:</h2>
+        <p>{{ personal_info['parts']['experience'] }}</p>
+    </div>
+    <div class="section">
+        <h2>Education:</h2>
+        <p>{{ personal_info['parts']['education'] }}</p>
+    </div>
+    <div class="section">
+        <h2>Skills:</h2>
+        <p>{{ personal_info['parts']['skills'] }}</p>
+    </div>
+</body>
+</html>
